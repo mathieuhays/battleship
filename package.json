@@ -1,0 +1,21 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "",
+  "main": "battleship.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --no-exit --ui tdd || true",
+    "start": "node battleship.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "lodash": "^4.5.1",
+    "prompt": "^1.0.0"
+  }
+}
