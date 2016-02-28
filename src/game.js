@@ -106,6 +106,10 @@ Game.prototype.play = function( command, callback ) {
         state = this.boards[ currentPlayer ].hit( command ),
         message;
 
+    if (_.isFunction(callback)) {
+        callback(command, state);
+    }
+
     if ( state === states.MISSED_HIT ) {
         displayResult("The "+ currentPlayer +" hasn't hit any ship.");
         this.nextTurn();
@@ -148,10 +152,6 @@ Game.prototype.play = function( command, callback ) {
         default:
             message = "This coordinate is too far, try again...";
 
-    }
-
-    if (_.isFunction(callback)) {
-        callback(command, state);
     }
 
     displayResult(message);
