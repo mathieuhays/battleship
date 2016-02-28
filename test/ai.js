@@ -75,9 +75,9 @@ describe('AI', function() {
                 command = computer.coordToCommand(5, 5);
 
             var possibleCommands = [
-                { x: 4, y:4 }, { x:4, y: 5 }, { x: 4, y: 6 },
-                { x: 5, y:4 }, { x:5, y: 5 }, { x: 5, y: 6 },
-                { x: 6, y:4 }, { x:6, y: 5 }, { x: 6, y: 6 },
+                               { x:5, y: 4 },
+                { x: 4, y:5 }, { x:5, y: 5 }, { x: 6, y: 5 },
+                               { x:5, y: 6 }
             ];
 
             possibleCommands = possibleCommands.map((coord) => {
@@ -116,8 +116,6 @@ describe('AI', function() {
                 { x: 4, y:5 }, { x:5, y: 5 }, { x: 6, y: 5 },
                                { x:5, y: 6 }
             ];
-
-            console.log(surroundings);
 
             expect(surroundings).to.eql(possibleCommands);
         });
